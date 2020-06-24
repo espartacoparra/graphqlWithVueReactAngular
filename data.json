@@ -1,0 +1,57 @@
+{
+ "users": [
+  {
+   "id": 1,
+   "name": "Espartaco",
+   "latsName": "Ramirez",
+   "cedula": "123456789",
+   "phone": "0424-7654321",
+   "address": "Maracay",
+   "country": "Venezuela",
+   "series": [
+    {
+     "id": 1,
+     "user_id": 1,
+     "title": "Vis a Vis"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Valentina",
+   "latsName": "Ramirez",
+   "cedula": "987654321",
+   "phone": "0424-1234567",
+   "address": "Maracay",
+   "country": "Venezuela",
+   "series": [
+    {
+     "id": 2,
+     "user_id": 2,
+     "title": "la casa de papel"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Igor",
+   "latsName": "Ramirez",
+   "cedula": "25430251",
+   "phone": "0424-5648975",
+   "address": "Vitoria",
+   "country": "España",
+   "series": [
+    {
+     "id": 5,
+     "user_id": 3,
+     "title": "Dark"
+    },
+    {
+     "id": 6,
+     "user_id": 3,
+     "title": "Pequeñas Mantirosas"
+    }
+   ]
+  }
+ ]
+}
