@@ -18,7 +18,7 @@ export const QueryRequest = ({ onChange, type, queryGet }) => {
 
     console.log(data);
 
-    return data ? (
+    return !loading ? (
         <div className="row mt-4">
             <div className="col-2">
                 <h4>Consulta</h4>
@@ -42,11 +42,9 @@ export const QueryRequest = ({ onChange, type, queryGet }) => {
           <Button className="mt-5" variant="secondary">Ejecutar query</Button>
         </div> */}
         </div>
-    ) : loading ? (
-        <p>Loading…</p>
-    ) : (
-                <p>Error!</p>
-            )
+    ) :
+        < p > Loading…</p >
+
 };
 
 export default QueryRequest
