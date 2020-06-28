@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="justify-content-center">Welcome to Your Angular App and GraphQL</h1>
+  <h4>Query para todos los usuarios dinamica</h4>
+  <app-query [query]="queryAllUsers" [data]="users" (updateData)="getUsers($event)"></app-query>
+  <h4>Query para un usuarios por id dinamica</h4>
+  <app-query [query]="user" [data]="oneUser" (updateData)="getUser($event)"></app-query>
+  <h4>Query para todos los usuarios dinamica filtrado por Pais</h4>
+  <app-query [query]="getUsersByCountry" [data]="userByCountry" (updateData)="getUsersByCounty($event)"></app-query>
+</div>
