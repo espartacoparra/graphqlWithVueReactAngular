@@ -39,6 +39,23 @@ app.use('/graphql', graphqlHTTP({
 
 app.post('/graphqljson', async (req, res) => {
    const { query } = req.body;
+   let querys = `query{
+      allUsers{
+        id
+        name
+        latsName
+        cedula
+        country
+        series {
+           id
+           user_id
+           title
+         }
+      }
+   }`
+   console.log('queryzx', query)
+   let awas = await (graphql(schema, query, root)).data
+   console.log(awas)
    return res.json((await (graphql(schema, query, root))).data)
 }
 )
