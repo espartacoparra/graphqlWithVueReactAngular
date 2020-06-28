@@ -5,16 +5,16 @@ const { users } = require('./data.json')
 const schem = require('./schema.js').schema
 const bodyParser = require('body-parser')
 const app = espress()
-var cors = require('cors')
-app.use(cors())
-
-app.use(bodyParser.json())
+const cors = require('cors')
 const schema = buildSchema(schem)
+app.use(cors())
+app.use(bodyParser.json())
 
 let getUser = (args) => {
    let id = args.id
    return users.filter(user => { return user.id == id })[0]
 }
+
 let getUsersByCountries = (args) => {
    let country = args.country
    if (country) {
@@ -43,26 +43,8 @@ app.use('/graphql', graphqlHTTP({
    graphiql: true
 }))
 
-
 app.post('/graphqljson', async (req, res) => {
    const { query } = req.body;
-   let querys = `query{
-      allUsers{
-        id
-        name
-        latsName
-        cedula
-        country
-        series {
-           id
-           user_id
-           title
-         }
-      }
-   }`
-   console.log('queryzx', query)
-   let awas = await (graphql(schema, query, root)).data
-   console.log(awas)
    return res.json((await (graphql(schema, query, root))).data)
 }
 )
