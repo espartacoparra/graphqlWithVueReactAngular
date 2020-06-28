@@ -4,6 +4,7 @@ module.exports = {
   allUsers:[User]
   user(id:Int!):User
   usersByCountry(country:String):[User]
+  allSeries:[[Series]]
  }
  type User{
     id:Int
@@ -20,6 +21,12 @@ module.exports = {
   id: Int
   user_id: Int
   title: String
+  details:Details
+ }
+
+ type Details{
+      duracion: String
+      director: String
  }
  `
 }

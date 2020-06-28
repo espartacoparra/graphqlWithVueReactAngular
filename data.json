@@ -12,7 +12,11 @@
     {
      "id": 1,
      "user_id": 1,
-     "title": "Vis a Vis"
+     "title": "Vis a Vis",
+     "details": {
+      "duracion": "60 min",
+      "director": "pedro Martinez"
+     }
     }
    ]
   },
@@ -28,7 +32,11 @@
     {
      "id": 2,
      "user_id": 2,
-     "title": "la casa de papel"
+     "title": "la casa de papel",
+     "details": {
+      "duracion": "43 min",
+      "director": "pedro Martinez"
+     }
     }
    ]
   },
@@ -44,12 +52,20 @@
     {
      "id": 5,
      "user_id": 3,
-     "title": "Dark"
+     "title": "Dark",
+     "details": {
+      "duracion": "60 min",
+      "director": "pedro Martinez"
+     }
     },
     {
      "id": 6,
      "user_id": 3,
-     "title": "Pequeñas Mantirosas"
+     "title": "Pequeñas Mantirosas",
+     "details": {
+      "duracion": "45 min",
+      "director": "pedro Martinez"
+     }
     }
    ]
   }

@@ -24,10 +24,17 @@ let getUsersByCountries = (args) => {
    }
 }
 
+let getAllSeries = () => {
+   return users.map(user => {
+      return user.series
+   })
+}
+
 const root = {
    allUsers: users,
    user: getUser,
-   usersByCountry: getUsersByCountries
+   usersByCountry: getUsersByCountries,
+   allSeries: getAllSeries
 }
 
 app.use('/graphql', graphqlHTTP({

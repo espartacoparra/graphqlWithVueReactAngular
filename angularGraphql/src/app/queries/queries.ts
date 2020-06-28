@@ -1,5 +1,5 @@
 export default {
- allUsers: `query {
+  allUsers: `query {
   allUsers{
     id
     name
@@ -10,10 +10,14 @@ export default {
       id
       user_id
       title
+      details {
+        duracion
+        director
+      }
     }
   }
 }`,
- getUsersByCountry: `query {
+  getUsersByCountry: `query {
  usersByCountry(country:"Venezuela"){
  id
    name
@@ -24,10 +28,14 @@ export default {
      id
      user_id
      title
+     details {
+      duracion
+      director
+    }
    }
  }
 }`,
- user: `query {
+  user: `query {
  user(id:2){
  id
    name
@@ -38,6 +46,10 @@ export default {
      id
      user_id
      title
+     details {
+      duracion
+      director
+    }
    }
  }
 }`
